@@ -1,6 +1,7 @@
 #1 /usr/bin/bash/env python
 
-from pycrypto.Crypto.Util.number import inverse
+from Crypto.Util.number import inverse
+from Crypto.Util.number import long_to_bytes
 
 c = 861270243527190895777142537838333832920579264010533029282104230006461420086153423
 n = 1311097532562595991877980619849724606784164430105441327897358800116889057763413423
@@ -13,4 +14,6 @@ phi = ( p - 1 )* ( q -1 )
 d = inverse(e,phi)
 
 m = pow( c, d, n )
-print (hex(m)[2:-1].decode('hex'))
+
+print(long-to-bytes(m))
+## print (hex(m)[2:-1].decode('hex'))
